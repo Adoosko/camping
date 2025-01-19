@@ -5,8 +5,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Na Formu",
+
   description:
-    "Dosiahnutie vysnívanej váhy nikdy nebolo jednoduchšie. Vyskúšaj overené recepty, ktoré už pomohli desiatkam ľudí.",
+    "Dosiahnutie vysnívanej váhy nikdy nebolo jednoduchšie. Vyskúšaj overené recepty, ktoré už pomohli desiatkam ľudí."
 };
 
 export default function RootLayout({
