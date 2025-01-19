@@ -1,20 +1,26 @@
 import Image from "next/image";
 import Button from "./Button";
 
-const GetApp = () => {
+const Offer = () => {
   return (
     <section
       className="flexCenter w-full flex-col pb-[100px]
-    "
+  "
     >
       <div className="get-app">
         <div
-          className="z-20 flex w-full flex-1 flex-col lg:flex-row items-start
-        justify-center gap-12"
+          className="z-20 flex w-full flex-1  lg:flex-row items-start
+      justify-center gap-12 flex-col-reverse"
         >
+          <Image
+            src={"/ebook0.png"}
+            alt="phones with app screen"
+            width={550}
+            height={870}
+          />
           <div className="flex flex-col gap-8">
             <h2 className="bold-40 text-neutral-900 lg:bold-64 xl:max-w-[320px]">
-              Kúpte teraz za výhodnú cenu
+              Čo môžete očakávať?
             </h2>
             <p className="regular-16 text-neutral-900">
               Naučte sa, ako jednoducho a chutne nabrať svalovú hmotu bez
@@ -36,17 +42,10 @@ const GetApp = () => {
               ></Button>
             </div>
           </div>
-
-          <Image
-            src={"/ebook0.png"}
-            alt="phones with app screen"
-            width={550}
-            height={870}
-          />
         </div>
       </div>
     </section>
   );
 };
 
-export default GetApp;
+export default Offer;

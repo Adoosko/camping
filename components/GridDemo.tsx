@@ -71,14 +71,14 @@ export function ExpandableCardDemo() {
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white  sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
+                {/* <Image
                   priority
                   width={300}
                   height={300}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-[350px] lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg  object-center"
-                />
+                  className="w-full h-[400px] lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg  object-center"
+                /> */}
               </motion.div>
 
               <div>
@@ -116,7 +116,7 @@ export function ExpandableCardDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-900 text-sm md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-900 text-sm md:text-sm lg:text-base h-[550px] md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto  [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -210,9 +210,9 @@ const cards = [
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <div className="flex flex-col gap-3">
-          <p className="font-bold text-lg">Ingrediencie</p>
-          <ul className="list-disc">
+        <div className="flex flex-col gap-3 px-8">
+          <p className="font-bold text-xl">Ingrediencie</p>
+          <ul className="list-disc text-lg">
             <li>100 ml mlieka</li>
             <li>60g ovsených vločiek</li>
             <li>1/2 bananu</li>
@@ -224,8 +224,8 @@ const cards = [
             <li>štipka soli</li>
             <li>20g masla</li>
           </ul>
-          <p className="font-bold text-lg">Postup</p>
-          <ul className="list-disc flex flex-col gap-2 ">
+          <p className="font-bold text-xl">Postup</p>
+          <ul className="list-disc flex flex-col gap-2 text-lg  ">
             <li>
               Do mixéra pridaj plnotučné mlieko, ovsené vločky, polovicu banánu,
               vanilkový proteínový prášok, vajce, škoricu, prášok do pečiva a

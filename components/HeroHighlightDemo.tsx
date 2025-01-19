@@ -18,7 +18,7 @@ export function HeroHighlightDemo() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className=" px-4 bold-32 text-white lg:bold-52 max-w-4xl leading-relaxed lg:leading-snug text-center lg:text-left mx-auto "
+        className=" px-4 bold-40 text-white lg:bold-52 max-w-4xl leading-relaxed lg:leading-snug text-center lg:text-left mx-auto "
       >
         Unavuje ťa rozhodovať, čo jesť? Objav recepty, ktoré urobia
         <Highlight className="text-black dark:text-white">
