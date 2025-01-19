@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { CompareDemo } from "./CompareDemo";
 
 const Guide = () => {
   return (
-    <section className="flexCenter flex-col">
+    <section className="flexCenter flex-col pt-10">
       <div
         className=" padding-container
       max-container w-full pb-24"
@@ -13,7 +14,7 @@ const Guide = () => {
           <h2 className="bold-40 lg:bold-60 xl:max-w-[390px]">
             Cítiš, že to zvládneš aj ty?
           </h2>
-          <p className="regular-24 text-gray-40 xl:max-w-[520px]">
+          <p className="regular-24 text-gray-40 xl:max-w-[520px] mb-16">
             Dosiahnutie vysnívanej váhy nikdy nebolo jednoduchšie. Vyskúšaj
             overené recepty, ktoré už pomohli desiatkam ľudí.
           </p>
@@ -24,15 +25,15 @@ const Guide = () => {
       w-full"
       >
         <Image
-          src={"/boat.png"}
+          src={"/table.webp"}
           alt="boat"
           width={1440}
           height={580}
           className="w-full object-cover object-center 2xl:rounded-5xl"
         />
         <div
-          className="absolute flex bg-white py-8 pl-5 pr-7 gap-3
-         rounded-3xl border shadow-md md:left-[5%] lg:top-20"
+          className="absolute flex  bg-white py-8 pl-5 pr-7 gap-3
+         rounded-3xl border shadow-md"
         >
           <Image
             src={"/meter.svg"}
@@ -41,13 +42,16 @@ const Guide = () => {
             height={158}
             className="h-full w-auto"
           />
-          <div className="flexBetween flex-col">
+          <div className="flexBetween  flex-col">
             <div className="flex w-full flex-col">
               <div className="flexBetween w-full flex gap-10">
                 <p className="regular-16 text-gray-20">Aktuálna váha</p>
                 <p className="bold-16 text-green-50">Za 3 mesiace</p>
               </div>
               <p className="bold-20 mt-2">68 KG</p>
+            </div>
+            <div>
+              <CompareDemo />
             </div>
             <div className="flex w-full flex-col">
               <p className="regular-16 text-gray-20">Počiatočná váha</p>

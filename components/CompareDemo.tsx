@@ -2,13 +2,13 @@ import { Compare } from "@/components/ui/compare";
 
 export function CompareDemo() {
   return (
-    <div className="p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4">
+    <div className="p-2 border rounded-3xl bg-neutral-900   border-neutral-800 px-2">
       <Compare
         firstImage="/before0.png"
         secondImage="/after0.png"
         firstImageClassName="object-cover object-left-top"
         secondImageClassname="object-cover object-left-top"
-        className="h-[250px] w-[200px] md:h-[500px] md:w-[500px]"
+        className="h-[250px] w-[250px] md:h-[500px] md:w-[500px]"
         slideMode="hover"
       />
     </div>

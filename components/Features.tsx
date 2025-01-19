@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { BentoGridThirdDemo } from "./BentoGrid";
+import { ExpandableCardDemo } from "./GridDemo";
 
 const Features = () => {
   return (
-    <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
+    <section className="flex-col flexCenter overflow-hidden  bg-neutral-900 mt-52 pb-16">
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1 lg:min-h-[900px]">
           {/* <Image
@@ -16,7 +16,7 @@ const Features = () => {
         </div>
 
         <div className="z-20 flex w-full flex-col lg:w-[60%]">
-          <div className="relative">
+          <div className="relative mt-16 ">
             <Image
               src="/food.png"
               alt="camp"
@@ -24,7 +24,9 @@ const Features = () => {
               height={50}
               className="absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]"
             />
-            <h2 className="bold-40 lg:bold-64">Ukážka Receptov</h2>
+            <h2 className="bold-40 text-white lg:bold-64 text-center  mb-16">
+              Ukážka Receptov
+            </h2>
           </div>
           {/* <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20">
             {FEATURES.map((feature) => (
@@ -36,7 +38,7 @@ const Features = () => {
               />
             ))}
           </ul> */}
-          <BentoGridThirdDemo />
+          <ExpandableCardDemo />
         </div>
       </div>
     </section>

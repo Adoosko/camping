@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Camping App",
-  description: "Travel UI/UX for Camping",
+  title: "Na Formu",
+  description:
+    "Dosiahnutie vysnívanej váhy nikdy nebolo jednoduchšie. Vyskúšaj overené recepty, ktoré už pomohli desiatkam ľudí.",
 };
 
 export default function RootLayout({

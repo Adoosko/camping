@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import { CompareDemo } from "./CompareDemo";
+import { HeroHighlightDemo } from "./HeroHighlightDemo";
 
 const Hero = () => {
   return (
@@ -14,14 +15,11 @@ const Hero = () => {
       >
         {/* LEFT SIDE */}
         <div className="relative max-container  z-20 flex flex-1 flex-col xl:w-1/2">
-          <Image
-            src={"/food.png"}
-            alt="camp"
-            width={50}
-            height={50}
-            className="absolute left-[-5px] top-[-30px] w-10 lg:w-[40px]"
-          ></Image>
-          <h1 className="bold-52 text-white lg:bold-88">Na Formu</h1>
+          <HeroHighlightDemo />
+          {/* <h1 className="bold-40 text-white lg:bold-64 mb-10">
+            Unavuje ťa rozhodovať, čo jesť? Objav recepty, ktoré urobia
+            chudnutie a rast svalov jednoduché a chutné!
+          </h1> */}
           <p className="regular-24 mt-6 text-gray-10 xl:max-w-[520px]">
             „Tvoja cesta k forme začína na tanieri.“
           </p>
@@ -56,10 +54,10 @@ const Hero = () => {
             <Button type="button" title="Schudnúť" variant="btn_white_text" />
           </div>
         </div>
-        <div className="relative flex flex-1 items-start ">
+        <div className="relative flex flex-1  justify-center ">
           <div
             className="relative z-20  flex flex-col gap-8
-         rounded-3xl bg-green-90 px-7 py-8"
+         rounded-3xl bg-neutral-800 px-7 py-8"
           >
             <div className="flex flex-col">
               <div className="flexBetween">
@@ -68,7 +66,7 @@ const Hero = () => {
               <p className="bold-20 text-white">6 mesiacov</p>
             </div>
 
-            <div className="flexBetween">
+            <div className="flex flex-col text-center">
               <div className="flex flex-col">
                 <p className="regular-16 block text-gray-20">Počiatočná váha</p>
                 <p className="bold-20 text-white">70 KG</p>

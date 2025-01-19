@@ -9,8 +9,9 @@ const Navbar = () => {
         className="flexBetween 
   px-10 relative z-30 py-5 max-container"
       >
-        <Link href={"/"}>
+        <Link href={"/"} className="text-white flex items-center font-bold">
           <Image src={"/logo.png"} alt="logo" width={100} height={100}></Image>
+          NA FORMU
         </Link>
         {/* <ul className="hidden h-full gap-12 lg:flex">
         {NAV_LINKS.map((link) => (
