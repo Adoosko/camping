@@ -68,29 +68,29 @@ export const Highlight = ({
   className?: string;
 }) => {
   return (
-    <span
-    // initial={{
-    //   backgroundSize: "0% 100%",
-    // }}
-    // animate={{
-    //   backgroundSize: "100% 100%",
-    // }}
-    // transition={{
-    //   duration: 2,
-    //   ease: "linear",
-    //   delay: 0.5,
-    // }}
-    // style={{
-    //   backgroundRepeat: "no-repeat",
-    //   backgroundPosition: "left center",
-    //   display: "inline",
-    // }}
-    // className={cn(
-    //   `relative inline-block pb-1   px-1 rounded-lg bg-gradient-to-r from-green-300 to-green-300 dark:from-green-500 dark:to-green-500`,
-    //   className
-    // )}
+    <motion.span
+      initial={{
+        backgroundSize: "0% 100%",
+      }}
+      animate={{
+        backgroundSize: "100% 100%",
+      }}
+      transition={{
+        duration: 2,
+        ease: "linear",
+        delay: 0.5,
+      }}
+      style={{
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left center",
+        display: "inline",
+      }}
+      className={cn(
+        `relative inline-block pb-1   px-1 rounded-lg bg-gradient-to-r from-green-300 to-green-300 dark:from-green-500 dark:to-green-500`,
+        className
+      )}
     >
       {children}
-    </span>
+    </motion.span>
   );
 };
