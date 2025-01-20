@@ -20,7 +20,7 @@ const Hero = () => {
             Unavuje ťa rozhodovať, čo jesť? Objav recepty, ktoré urobia
             chudnutie a rast svalov jednoduché a chutné!
           </h1> */}
-          <p className="regular-24 mt-6 text-gray-10 xl:max-w-[520px]">
+          <p className="regular-16 mt-6 text-gray-10 xl:max-w-[520px]">
             „Tvoja cesta k forme začína na tanieri.“
           </p>
           <div className="my-11 flex flex-wrap gap-5">
