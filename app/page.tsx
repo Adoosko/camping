@@ -1,18 +1,20 @@
 import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonialsDemo";
+import BuyNow from "@/components/BuyNow";
+
 import Features from "@/components/Features";
-import GetApp from "@/components/GetApp";
-import Guide from "@/components/Guide";
+
 import Hero from "@/components/Hero";
 import Offer from "@/components/Offer";
+import Transformation from "@/components/Transformation";
 
 export default function Home() {
   return (
     <>
       <Hero></Hero>
 
-      <Guide></Guide>
+      <Transformation />
       <Features></Features>
-      <GetApp></GetApp>
+      <BuyNow />
       <Offer />
       <div className="bg-neutral-900">
         <h4 className="text-4xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-semibold text-white pt-16 ">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 
-const GetApp = () => {
+const BuyNow = () => {
   return (
     <section
       className="flexCenter w-full flex-col pb-[20px]
@@ -52,4 +52,4 @@ const GetApp = () => {
   );
 };
 
-export default GetApp;
+export default BuyNow;

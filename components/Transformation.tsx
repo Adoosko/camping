@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CompareDemo } from "./CompareDemo";
 
-const Guide = () => {
+const Transformation = () => {
   return (
     <section className="flexCenter flex-col pt-10">
       <div
@@ -64,4 +64,4 @@ const Guide = () => {
   );
 };
 
-export default Guide;
+export default Transformation;
