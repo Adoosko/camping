@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 export const metadata: Metadata = {
   title: "Na Formu",
 
@@ -24,6 +24,7 @@ export default function RootLayout({
         <Navbar></Navbar>
         <main className="relative overflow-hidden">{children}</main>
         <Footer></Footer>
+        <SpeedInsights />
       </body>
     </html>
   );
