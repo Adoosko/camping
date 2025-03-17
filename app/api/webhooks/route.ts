@@ -25,7 +25,7 @@ export async function POST(req: Request) {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-    const email = session.metadata?.email;
+    const email = session.customer_email;
 
     if (!email) {
       console.error("Email nenájdený v metadata.");

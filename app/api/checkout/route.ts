@@ -41,7 +41,9 @@ export async function POST(req: Request) {
       ],
       success_url: `${process.env.NEXT_PUBLIC_URL}/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL}/cancel`,
-      metadata: { email }, // Email si uložíme pre webhook
+      metadata: {
+        email: email, // Sem musíš poslať email užívateľa
+      }, // Email si uložíme pre webhook
     });
 
     return NextResponse.json({ url: session.url });
