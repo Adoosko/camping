@@ -1,7 +1,5 @@
-import fs from "fs";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import path from "path";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -38,11 +36,11 @@ export async function POST(req: Request) {
     }
 
     // ✅ Skontroluj, či súbor existuje
-    const ebookPath = path.join(process.cwd(), "public", "ebook.pdf");
-    if (!fs.existsSync(ebookPath)) {
-      console.error("Súbor ebook.pdf neexistuje.");
-      return NextResponse.json({ error: "eBook nenájdený." }, { status: 500 });
-    }
+    // const ebookPath = path.join(process.cwd(), "public", "ebook.pdf");
+    // if (!fs.existsSync(ebookPath)) {
+    //   console.error("Súbor ebook.pdf neexistuje.");
+    //   return NextResponse.json({ error: "eBook nenájdený." }, { status: 500 });
+    // }
 
     // ✅ Nastavenie Gmail SMTP s App Password
     const transporter = nodemailer.createTransport({
