@@ -1,8 +1,6 @@
 import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonialsDemo";
 import BuyNow from "@/components/BuyNow";
 
-import Features from "@/components/Features";
-
 import Hero from "@/components/Hero";
 import Offer from "@/components/Offer";
 import Transformation from "@/components/Transformation";
@@ -10,10 +8,12 @@ import Transformation from "@/components/Transformation";
 export default function Home() {
   return (
     <>
-      <Hero></Hero>
+      <div className="bg-neutral-950">
+        <Hero></Hero>
+      </div>
 
       <Transformation />
-      <Features></Features>
+      {/* <Features></Features> */}
       <BuyNow />
       <Offer />
       <div className="bg-neutral-900">

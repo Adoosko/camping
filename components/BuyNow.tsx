@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Button from "./Button";
+import CheckoutForm from "./CheckoutForm";
 
 const BuyNow = () => {
   return (
     <section
-      className="flexCenter w-full flex-col pb-[20px]
+      className="bg-neutral-100 pt-36 flexCenter w-full flex-col pb-[20px]
     "
     >
       <div className="get-app">
@@ -30,18 +30,14 @@ const BuyNow = () => {
                 30€
               </p>
               <p className="text-5xl font-bold text-green-500  text-center ">
-                19€
+                24€
               </p>
-              <Button
-                title="Kúpiť"
-                type="button"
-                variant="btn_dark_green"
-              ></Button>
+              <CheckoutForm />
             </div>
           </div>
 
           <Image
-            src={"/ebook0.png"}
+            src={"/cutEbook.png"}
             alt="phones with app screen"
             width={550}
             height={870}

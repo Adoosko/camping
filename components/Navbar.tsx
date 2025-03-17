@@ -1,16 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <nav className="bg-neutral-900 ">
+    <nav
+      className="  backdrop-filter backdrop-blur-lg  z-[99999] sticky
+    
+    
+    
+    top-0 bg-neutral-800/30 "
+    >
       <div
         className="flexBetween 
-  px-10 relative z-30 py-5 max-container"
+  px-10 relative   max-container"
       >
         <Link href={"/"} className="text-white flex items-center font-bold">
-          <Image src={"/logo.png"} alt="logo" width={100} height={100}></Image>
+          <Image src={"/logo.png"} alt="logo" width={85} height={80}></Image>
           NA FORMU
         </Link>
         {/* <ul className="hidden h-full gap-12 lg:flex">
@@ -26,22 +31,22 @@ const Navbar = () => {
           </Link>
         ))}
       </ul> */}
-        <div className="lg:flexCenter hidden">
+        {/* <div className="lg:flexCenter hidden">
           <Button
             type="button"
             title="Kontakt"
             icon="/user.svg"
             variant="btn_green"
           ></Button>
-        </div>
+        </div> */}
 
-        <Image
+        {/* <Image
           src={"/menu.svg"}
           alt="menu"
           width={32}
           height={32}
           className="inline-block cursor-pointer  lg:hidden"
-        ></Image>
+        ></Image> */}
       </div>
     </nav>
   );

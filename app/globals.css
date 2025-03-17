@@ -12,6 +12,7 @@
 
 body {
   font-family: Inter;
+  @apply bg-neutral-950;
 }
 
 @layer utilities {

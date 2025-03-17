@@ -2,7 +2,7 @@ import { Compare } from "@/components/ui/compare";
 
 export function CompareDemo() {
   return (
-    <div className="p-2 border rounded-3xl bg-neutral-900   border-neutral-800 px-2">
+    <div className="p-2 border rounded-3xl bg-neutral-200  border-neutral-300 px-2">
       <Compare
         firstImage="/before0.png"
         secondImage="/after0.png"

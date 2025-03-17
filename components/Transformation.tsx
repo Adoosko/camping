@@ -3,7 +3,7 @@ import { CompareDemo } from "./CompareDemo";
 
 const Transformation = () => {
   return (
-    <section className="flexCenter flex-col pt-10">
+    <section className="flexCenter bg-neutral-100 flex-col pt-10">
       <div
         className=" padding-container
       max-container w-full pb-24"
@@ -46,9 +46,9 @@ const Transformation = () => {
             <div className="flex w-full flex-col">
               <div className="flexBetween w-full flex gap-10">
                 <p className="regular-16 text-gray-20">Aktuálna váha</p>
-                <p className="bold-16 text-green-50">Za 3 mesiace</p>
+                <p className="bold-16 text-green-50">Za 6 mesiacov</p>
               </div>
-              <p className="bold-20 mt-2">68 KG</p>
+              <p className="bold-20 mt-2">78 KG</p>
             </div>
             <div>
               <CompareDemo />

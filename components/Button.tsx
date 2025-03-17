@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: string;
   full?: boolean;
   customClass?: string;
+  handleOnClick?: () => void;
 };
 
 const Button = ({
@@ -15,10 +16,12 @@ const Button = ({
   icon,
   variant,
   full,
+  handleOnClick,
   customClass,
 }: ButtonProps) => {
   return (
     <button
+      onClick={handleOnClick}
       className={`flexCenter gap-3 rounded-full border ${variant} ${
         full && "w-full"
       }`}

@@ -44,12 +44,17 @@ export function FeaturesSectionDemo() {
           Prečo tento eBook potrebuješ?
         </h4>
 
-        <p className="text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal ">
-          Objav recepty, ktoré sú jednoduché, rýchle a neskutočne chutné! Každý
-          z nich je navrhnutý tak, aby ti pomohol nabrať svaly a zároveň
-          podporil zdravý životný štýl. Nezáleží na tom, či práve začínaš, alebo
-          už makáš roky – tento eBook ti ukáže, že dosiahnuť výsledky nemusí byť
-          žiadna veda.
+        <p className="text-base  max-w-2xl flex flex-col text-left  my-4 mx-auto text-neutral-500 font-normal ">
+          Tento eBook vám ponúka overený návod na chudnutie, ktorý skutočne
+          funguje! Nájdete v ňom:
+          <span>✅ Nákupný zoznam pre jednoduchšie plánovanie jedál</span>
+          <span>✅ Názornú ukážku, ako chudnutie prebieha krok za krokom</span>
+          <span>✅ 120 chutných receptov s presnými nutričnými hodnotami</span>
+          <span>✅ Bonus: CheatSheet</span>
+          <span>
+            🍽️ Jedzte s radosťou, chudnite efektívne a dosiahnite svoje ciele!
+            💪📩
+          </span>
         </p>
       </div>
 
