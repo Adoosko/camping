@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     // Overenie zľavového kódu
     const validCodes: Record<string, number> = {
       FORMA25: 0.25, // 25% zľava
-      ZLAVA50: 0.5, // 50% zľava
+      IBAFORMA100: 0,
     };
 
     if (discountCode && validCodes[discountCode.toUpperCase()]) {
