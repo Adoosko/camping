@@ -4,6 +4,7 @@ import CheckoutForm from "./CheckoutForm";
 const BuyNow = () => {
   return (
     <section
+      id="buyNow"
       className="bg-neutral-100 pt-36 flexCenter w-full flex-col pb-[20px]
     "
     >

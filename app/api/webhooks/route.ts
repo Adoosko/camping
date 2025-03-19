@@ -3,13 +3,14 @@ import nodemailer from "nodemailer";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-02-24.acacia", // Použi stabilnú verziu
+  apiVersion: "2025-02-24.acacia", // Stabilná verzia API
 });
 
 export async function POST(req: Request) {
   const sig = req.headers.get("stripe-signature");
+
   if (!sig) {
-    console.error("Chýba Stripe signature.");
+    console.error("❌ Chýba Stripe signature.");
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -22,27 +23,32 @@ export async function POST(req: Request) {
       process.env.STRIPE_WEBHOOK_SECRET!
     );
   } catch (err) {
-    console.error("Webhook error:", err);
+    console.error("❌ Webhook error:", err);
     return NextResponse.json({ error: "Webhook error" }, { status: 400 });
   }
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-    const email = session.customer_details?.email; // Použi správny spôsob
+    const email = session.customer_details?.email;
 
     if (!email) {
-      console.error("Email nenájdený.");
+      console.error("❌ Email nenájdený.");
       return NextResponse.json({ error: "Chýbajúce údaje." }, { status: 400 });
     }
 
-    // ✅ Skontroluj, či súbor existuje
-    // const ebookPath = path.join(process.cwd(), "public", "ebook.pdf");
-    // if (!fs.existsSync(ebookPath)) {
-    //   console.error("Súbor ebook.pdf neexistuje.");
-    //   return NextResponse.json({ error: "eBook nenájdený." }, { status: 500 });
-    // }
+    // ✅ Profesionálny HTML email
+    const emailHtml = `
+      <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
+        <h1 style="color: #007BFF;">📖 Ďakujeme za váš nákup! 🎉</h1>
+        <p>Váš e-book je pripravený na stiahnutie.</p>
+        <a href="${process.env.EBOOK_DOWNLOAD_LINK}" style="background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+          📥 Stiahnuť e-book
+        </a>
+        <p>Ak máte problém, kontaktujte nás na <a href="mailto:${process.env.SUPPORT_EMAIL}">${process.env.SUPPORT_EMAIL}</a>.</p>
+      </div>
+    `;
 
-    // ✅ Nastavenie Gmail SMTP s App Password
+    // ✅ Nastavenie SMTP cez Gmail (alebo iný poskytovateľ)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -56,17 +62,10 @@ export async function POST(req: Request) {
         from: `"Na Formu" <${process.env.EMAIL_USER}>`,
         to: email,
         subject: "📖 Tvoj eBook - Efektívne Chudnutie",
-        text: "Ďakujeme za kúpu! Tu je tvoj eBook.",
-        // attachments: [
-        //   {
-        //     filename: "ebook.pdf",
-        //     path: ebookPath,
-        //     contentType: "application/pdf",
-        //   },
-        // ],
+        html: emailHtml,
       });
 
-      console.log(`✅ Email odoslaný na ${email}`);
+      console.log(`✅ Email úspešne odoslaný na ${email}`);
     } catch (error) {
       console.error("❌ Chyba pri odosielaní e-mailu:", error);
       return NextResponse.json(
